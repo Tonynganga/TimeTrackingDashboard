@@ -37,8 +37,8 @@ body{
 .grids{
     display: grid;
     grid-template-columns: repeat(4, 170px);
-    grid-template-rows: repeat(2, 200px);
-    gap: 10px 10px;
+    grid-template-rows: repeat(2, 185px);
+    gap: 10px 15px;
     grid-template-areas: 
 
     "a b c d"
@@ -55,36 +55,51 @@ body{
 }
 .grid-work{
     grid-area: b;
+    margin: 4px 0 0 0; 
 }
 .grid-play{
     grid-area: c;
+    margin: 4px 0 0 0;
 }
 .grid-study{
     grid-area: d;
+    margin: 4px 0 0 0;
 }
 .grid-exercise{
     grid-area: e;
+    margin: 4px 0 0 0;
 }
 .grid-social{
     grid-area: f;
+    margin: 4px 0 0 0;
 }
 .grid-selfcare{
     grid-area: g;
+    margin: 4px 0 0 0;
 }
 .upper-grid{
+    /* margin: 10px 0 0 0; */
     height: 50%;
     background-color: var(--blue);
     border-radius: 8px;
-    padding: 20px 0 40px 20px;
+    padding: 30px 0 0px 20px;
+}
+.upper-grid img{
+    border: 2px solid #fff;
+    border-radius: 50%;
 }
 .upper-grid p{
-    margin: 15px 0 0 0;
+    margin: 20px 0 0 0;
+    color: var(--pale-blue);
+}
+.upper-grid h2{
+    margin: 8px 0 0 0;
 }
 .lower-grid{
-    padding: 10px 0 20px 15px;
+    padding: 10px 0 0 15px;
 }
 .lower-grid h5{
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
     color: var(--pale-blue);
 }
 .lower-grid h5:hover{
@@ -123,26 +138,36 @@ body{
     border-radius: 8px;
     background-color: var(--soft-orange-selfcare);
 }
+.icon-top{
+    display: flex;
+    justify-content: right;
+}
 .work-icon{
     width: 35px;
     height: 35px;
-    margin-right: 0;
+    right: 0;
     margin-left: auto;
-    /* padding: -5px 5px -10px 0; */
+    padding: 0 10px 0 0;
     margin: 0 0 -10px 0;
     position: relative;
+    
 }
 .inner-part{
     position: relative;
     border-radius: 8px;
     background-color: var(--dark-blue);
 }
+.inner-part:hover{
+    background-color: var(--desaturated-blue);
+    /* opacity: 0.9; */
+    cursor: pointer;
+}
 .inner-part h2{
     font-size: 40px;
-    padding: 25px 0 0 30px;
+    padding: 25px 0 0 20px;
 }
 .inner-part h6{
-    padding: 10px 0 30px 30px;
+    padding: 10px 0 30px 23px;
     color: var(--pale-blue);
 }
 .upper-desc{
@@ -150,13 +175,124 @@ body{
     justify-content: space-between;
 }
 .upper-desc h3{
+    padding: 5px 0 0 0;
     font-size: var(--default-font-card-titles);
 }
 .inner-part h3{
-    padding: 20px 0 0 30px;
+    padding: 10px 0 0 23px;
+    font-size: var(--default-font-card-titles);
 }
 .inner-part img{
     width: 13px;
     height: 4px;
     padding: 20px 25px 0 0;
+}
+.inner-part img:hover{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 375px){
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Rubik';
+        font-weight: 300;
+        color: #fff;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    .main-container{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        background-color: var(--very-dark-blue);
+        padding: 0 0 30px 0;
+    }
+    .grids{
+        width: 100%;
+        margin: 20px 20px 50px 20px;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .grid-profile{
+        grid-area: a;
+        background-color: var(--dark-blue);
+        border-radius: 8px;
+        margin: 5px 0 0 0;   
+    }
+    .upper-grid{
+        display: flex;
+        height: 50%;
+        background-color: var(--blue);
+        border-radius: 10px;
+        padding: 20px 0 20px 20px;
+    }
+    .reportto{
+        margin: 0 0 0 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .upper-grid img{
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+    .upper-grid p{
+        margin: 0px 0 0 0;
+        color: var(--pale-blue);
+        font-size: 14px;
+    }
+    .upper-grid h2{
+        margin: 8px 0 0 0;
+        font-size: 20px;
+    }
+    
+    .lower-grid{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px 20px 20px;
+    }
+    .lower-grid h5{
+        margin: 15px 0 0 0;
+        color: var(--pale-blue);
+    }
+    .lower-grid h5:hover{
+        color: #fff;
+        cursor: pointer;
+    }
+    .inner-part{
+        position: relative;
+        border-radius: 8px;
+        background-color: var(--dark-blue);
+    }
+    .upper-desc{
+        padding: 10px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .lower-desc{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 22px 0;
+    }
+    .upper-desc h3{
+        padding: 10px 0 0 20px;
+        font-size: var(--default-font-card-titles);
+    }
+    .upper-desc img{
+        padding: 15px 20px 0 0;
+    }
+    .lower-desc h2{
+        padding: 10px 0 0 20px;
+        font-size: 26px;
+    }
+    .lower-desc h6{
+        padding: 10px 20px 0 0;
+    }
+    
+
 }
